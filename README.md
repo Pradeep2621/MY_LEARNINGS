@@ -74,3 +74,14 @@ It clicked for me when I understood the difference between "In-Sample" and "Out-
 By holding back that 30% (the Test set), I’m creating a simulation of the "real world" to see if the model can actually handle data it has never seen before.
 
 Now that I know I need to split the data to get an honest score, I'm wondering: is the 70/30 split a strict rule, or do you change that ratio depending on how much total data you have?
+
+### Update: 2026-02-09
+- Day 42 of learning Data Science with IBM.
+
+After learning about the Train/Test split yesterday, today I dove into Polynomial Regression and how to choose the right "complexity" for a model.
+
+At first, I didn't get why we wouldn't always choose the most flexible model available. I assumed that if a curved line fits the data better than a straight line, then a *super* squiggly line (like a 16th-order polynomial) that touches every single data point would be the ultimate goal. I thought, "If the training error is zero, I've created the perfect model."
+
+It clicked for me when I learned about **Overfitting**. I saw a graph showing that when the model becomes *too* complex, it starts chasing the random noise in the data rather than the actual trend. It’s like a student who memorizes the exact answers to the homework but fails the exam because they didn't understand the underlying concepts. The notes showed that while the training error goes down as you make the model more complex, the "test error" eventually shoots back up because the model tries too hard to fit anomalies.
+
+It seems like Data Science is a constant balancing act between being "too simple" (Underfitting) and "too complex" (Overfitting). To handle this, the notes introduced "Cross Validation"—is this the standard way you all ensure your model isn't just getting lucky with its predictions?
