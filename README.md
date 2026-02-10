@@ -85,3 +85,14 @@ At first, I didn't get why we wouldn't always choose the most flexible model ava
 It clicked for me when I learned about **Overfitting**. I saw a graph showing that when the model becomes *too* complex, it starts chasing the random noise in the data rather than the actual trend. It’s like a student who memorizes the exact answers to the homework but fails the exam because they didn't understand the underlying concepts. The notes showed that while the training error goes down as you make the model more complex, the "test error" eventually shoots back up because the model tries too hard to fit anomalies.
 
 It seems like Data Science is a constant balancing act between being "too simple" (Underfitting) and "too complex" (Overfitting). To handle this, the notes introduced "Cross Validation"—is this the standard way you all ensure your model isn't just getting lucky with its predictions?
+
+### Update: 2026-02-10
+- Day 43 of learning Data Science with IBM.
+
+After learning yesterday that "Overfitting" is what happens when a model tries too hard and memorizes the noise in the data, I was left wondering how to fix it. I assumed the only solution was to use a simpler model, but today I learned about a technique called "Ridge Regression" that handles this specifically.
+
+At first, I didn't get how Ridge Regression actually worked. The notes mentioned that when a model overfits (like a high-order polynomial), the mathematical "coefficients" become massive numbers. I was stuck on the concept of "Alpha"—a parameter used to control these numbers. It felt counterintuitive to me: why would we purposefully penalize the model and force the coefficients to be smaller? I thought the goal was to let the model do whatever math it needed to fit the data points.
+
+It clicked for me when I visualized Alpha as a sort of "stiffness" control or a dampener. If Alpha is zero, the model is loose and wild, chasing every single outlier and creating those crazy squiggly lines I saw yesterday. But as you increase Alpha, it forces the model to ignore the small, random fluctuations and focus on the general trend. It basically stops the model from reacting too extremely to outliers.
+
+It seems like finding the right Alpha is the key—if it's too high, the model becomes too rigid (Underfitting), but if it's too low, it stays wild (Overfitting). I learned that we use Cross Validation to test different Alpha values and find the "sweet spot." For those of you working with noisy data, do you usually stick with Ridge Regression, or is Lasso better for handling these outliers?
