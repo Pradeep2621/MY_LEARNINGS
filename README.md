@@ -96,3 +96,14 @@ At first, I didn't get how Ridge Regression actually worked. The notes mentioned
 It clicked for me when I visualized Alpha as a sort of "stiffness" control or a dampener. If Alpha is zero, the model is loose and wild, chasing every single outlier and creating those crazy squiggly lines I saw yesterday. But as you increase Alpha, it forces the model to ignore the small, random fluctuations and focus on the general trend. It basically stops the model from reacting too extremely to outliers.
 
 It seems like finding the right Alpha is the key—if it's too high, the model becomes too rigid (Underfitting), but if it's too low, it stays wild (Overfitting). I learned that we use Cross Validation to test different Alpha values and find the "sweet spot." For those of you working with noisy data, do you usually stick with Ridge Regression, or is Lasso better for handling these outliers?
+
+### Update: 2026-02-11
+- Day 44 of learning Data Science with IBM.
+
+After learning yesterday that the "Alpha" value in Ridge Regression helps prevent overfitting, I was left with a big practical question: How do I actually know which number to pick for Alpha? Do I just keep guessing until it works? Today, I learned the answer is a technique called "Grid Search."
+
+At first, I was confused by the distinction between a "parameter" and a "hyperparameter." I assumed the model learned *everything* from the data. I also dreaded the idea of manual trial-and-error, imagining I’d have to write code to run the model 50 times with 50 different Alpha values just to see which one was best.
+
+It clicked for me when I realized that Hyperparameters (like Alpha) are settings *I* have to control because the model can't learn them from the data itself. Grid Search basically automates that whole messy trial-and-error process. I can essentially give the computer a list (a "grid") of different settings—like various Alpha values and normalization options—and it systematically builds a model for every single combination using Cross Validation. It then compares the R-squared scores and tells me exactly which combination wins.
+
+It feels great to have a method that removes the guesswork from tuning the model. However, considering it builds a new model for every single combination, does Grid Search become incredibly slow when you start working with massive datasets?
