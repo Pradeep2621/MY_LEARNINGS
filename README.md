@@ -120,3 +120,14 @@ It clicked for me when I built a **Machine Learning Pipeline**. I realized that 
 It was also satisfying to see the Exploratory Data Analysis (EDA) confirm real-world intuition; the visualizations clearly showed that smoking status was the strongest predictor of high costs, overpowering even BMI.
 
 Now that I see how much cleaner the code is, I can't imagine going back to manual steps. For those of you in the field, do you build pipelines right from the start of a project, or is that something you only add once you know which model works best?
+
+### Update: 2026-02-13
+- Day 46 of learning Data Science with IBM.
+
+After setting up my machine learning pipeline yesterday, I spent today refining the Medical Insurance project and dealing with the messy reality of the raw data. Specifically, I ran into a problem I hadn't thought much about before: missing values.
+
+At first, when I saw rows in the dataset where the age or smoking status was just a "?", my instinct was to simply delete them. I thought, "If the data isn't there, I can't trust it, so I should get rid of it." It felt safer to only work with "perfect" rows.
+
+It clicked for me when I understood the concept of "Imputation." I realized that by deleting a whole row just because one number (like Age) was missing, I was also throwing away valuable, valid information about that person's BMI, region, and number of children. Instead of deleting, I learned to fill the gaps—using the mean for continuous numbers like age, and the most frequent value for categories like smoking status. It allowed me to preserve the dataset size while keeping the model statistically sound.
+
+It feels like a delicate balance between saving data and "guessing." For those of you who handle messy datasets, at what point do you decide a row has too much missing info to save and just delete it?
