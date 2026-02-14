@@ -131,3 +131,14 @@ At first, when I saw rows in the dataset where the age or smoking status was jus
 It clicked for me when I understood the concept of "Imputation." I realized that by deleting a whole row just because one number (like Age) was missing, I was also throwing away valuable, valid information about that person's BMI, region, and number of children. Instead of deleting, I learned to fill the gaps—using the mean for continuous numbers like age, and the most frequent value for categories like smoking status. It allowed me to preserve the dataset size while keeping the model statistically sound.
 
 It feels like a delicate balance between saving data and "guessing." For those of you who handle messy datasets, at what point do you decide a row has too much missing info to save and just delete it?
+
+### Update: 2026-02-14
+- Day 47 of learning Data Science with IBM.
+
+After spending the last few days deep in the weeds of cleaning missing values and building pipelines, today I shifted gears to focus on how to actually present that data through Data Visualization.
+
+At first, I honestly thought the goal of a chart was to show *everything* I had worked on. My instinct was to pack as much data as possible into a single graph—using multiple colors, stacked bars, and complex legends—because I didn't want to "hide" any information. I thought a complex chart made the analysis look more impressive.
+
+It clicked for me when I studied the concept of "chart junk" and the philosophy that "less is more." I realized that adding unnecessary grid lines, 3D effects, or too many variables doesn't make the data better; it just confuses the person looking at it. I learned that a good visualization isn't a data dump; it's a tool to tell a specific story or highlight a single trend, like how the New York Times uses simple line graphs to show clear spikes in data.
+
+I am trying to retrain my brain to delete elements from my charts rather than add them. for those of you who build dashboards, is it difficult to convince stakeholders that a simpler chart is actually more accurate than a complex one?
