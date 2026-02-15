@@ -142,3 +142,14 @@ At first, I honestly thought the goal of a chart was to show *everything* I had 
 It clicked for me when I studied the concept of "chart junk" and the philosophy that "less is more." I realized that adding unnecessary grid lines, 3D effects, or too many variables doesn't make the data better; it just confuses the person looking at it. I learned that a good visualization isn't a data dump; it's a tool to tell a specific story or highlight a single trend, like how the New York Times uses simple line graphs to show clear spikes in data.
 
 I am trying to retrain my brain to delete elements from my charts rather than add them. for those of you who build dashboards, is it difficult to convince stakeholders that a simpler chart is actually more accurate than a complex one?
+
+### Update: 2026-02-15
+- Day 48 of learning Data Science with IBM.
+
+Following my realization yesterday about avoiding "chart junk," today I dove into the specific tools in the visualization toolbox: Line plots, Bar charts, Scatter plots, Box plots, and Histograms.
+
+At first, I assumed that as long as I plotted the correct numbers, the chart would automatically tell the "truth." I thought a graph was just a direct reflection of the dataset.
+
+It clicked for me when I saw two different bar charts representing the exact same data about immigration trends. One chart made a decrease look like a catastrophic crash, while the other showed it as a barely noticeable dip. I was confused until I looked at the Y-axis. The "scary" chart started the axis at a high number (zooming in on the top of the bars), while the "calm" chart started at zero. I realized that visualization isn't just about accuracy; it’s about perspective. A zoomed-in scale can manipulate how the viewer feels about the data without technically lying about the numbers.
+
+I am now much more cautious about how I set my axes to ensure I'm not accidentally exaggerating a trend. For those who present data often, do you have a hard rule about always starting the Y-axis at zero, or are there times when zooming in is actually better?
