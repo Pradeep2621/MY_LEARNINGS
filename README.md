@@ -153,3 +153,14 @@ At first, I assumed that as long as I plotted the correct numbers, the chart wou
 It clicked for me when I saw two different bar charts representing the exact same data about immigration trends. One chart made a decrease look like a catastrophic crash, while the other showed it as a barely noticeable dip. I was confused until I looked at the Y-axis. The "scary" chart started the axis at a high number (zooming in on the top of the bars), while the "calm" chart started at zero. I realized that visualization isn't just about accuracy; it’s about perspective. A zoomed-in scale can manipulate how the viewer feels about the data without technically lying about the numbers.
 
 I am now much more cautious about how I set my axes to ensure I'm not accidentally exaggerating a trend. For those who present data often, do you have a hard rule about always starting the Y-axis at zero, or are there times when zooming in is actually better?
+
+### Update: 2026-02-16
+- Day 49 of learning Data Science with IBM.
+
+After learning about the theory of charts and misleading axes yesterday, today I finally opened the toolbox to see *what* we actually use to build them in Python. The list was longer than I expected: Matplotlib, Pandas, Seaborn, Folium, Plotly, and PyWaffle.
+
+At first, I was honestly confused by the redundancy. I didn't get why I needed three different libraries (Matplotlib, Pandas, and Seaborn) just to make a simple bar chart or scatter plot. I thought, "Why not just learn one and ignore the rest?"
+
+It clicked for me when I realized that Matplotlib is basically the engine under the hood for both Pandas and Seaborn. I learned that while Matplotlib gives you granular control over every single pixel, it requires a lot of code to do simple things. Seaborn and Pandas are built *on top* of it to make the code shorter and the charts prettier by default. It helped me see them as layers rather than competitors: use Pandas for a quick check, Seaborn for a beautiful statistical report, and Folium if—and only if—I need a map.
+
+I am looking forward to seeing if I actually stick to the "easy" wrappers or if I end up needing the raw power of Matplotlib more often. For those of you who code in Python, do you stick to Seaborn for the aesthetics, or do you prefer building everything from scratch in Matplotlib?
