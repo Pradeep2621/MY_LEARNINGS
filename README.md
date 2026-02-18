@@ -164,3 +164,16 @@ At first, I was honestly confused by the redundancy. I didn't get why I needed t
 It clicked for me when I realized that Matplotlib is basically the engine under the hood for both Pandas and Seaborn. I learned that while Matplotlib gives you granular control over every single pixel, it requires a lot of code to do simple things. Seaborn and Pandas are built *on top* of it to make the code shorter and the charts prettier by default. It helped me see them as layers rather than competitors: use Pandas for a quick check, Seaborn for a beautiful statistical report, and Folium if—and only if—I need a map.
 
 I am looking forward to seeing if I actually stick to the "easy" wrappers or if I end up needing the raw power of Matplotlib more often. For those of you who code in Python, do you stick to Seaborn for the aesthetics, or do you prefer building everything from scratch in Matplotlib?
+
+### Update: 2026-02-18
+- Day 50 of learning Data Science with IBM.
+
+Yesterday I was wondering if I’d ever need to use the raw power of Matplotlib instead of the simpler wrappers like Seaborn and Pandas. Today, I think I got my answer after taking a peek under the hood at Matplotlib’s architecture.
+
+At first, I was completely lost in the jargon. I heard about a "Backend layer," an "Artist layer," and a "Scripting layer," and it felt way too abstract. I just wanted to make a plot, not learn about the internal plumbing of the library. My thinking was, "Why do I need to know this? I just call a function like `plt.hist()` and a chart appears."
+
+It clicked for me when I stopped thinking of Matplotlib as a chart-making tool and started seeing it as a blank canvas. The "Scripting layer" (Pyplot) is the easy, automated way to paint—it gives you a pre-made canvas and some basic tools. But the "Artist layer" is where the real control is. I learned that every single element on a plot—every line, every tick mark, the title, the labels—is considered its own independent "artist" object.
+
+Suddenly, I understood. Using a wrapper library is like asking an assistant to draw a bar chart for you. Using the Matplotlib Artist layer is like being given the pen and ruler to draw every single rectangle and write every label yourself. It's more work, but it gives you total control over every tiny detail.
+
+It feels like I’ve been driving an automatic car (Seaborn) and just learned how a manual transmission (Matplotlib) actually works. It’s a bit intimidating, but I can see why you’d need it for custom or complex visualizations. I wonder how often experienced users have to "get their hands dirty" with individual artist objects?
