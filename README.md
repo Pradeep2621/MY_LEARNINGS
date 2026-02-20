@@ -177,3 +177,16 @@ It clicked for me when I stopped thinking of Matplotlib as a chart-making tool a
 Suddenly, I understood. Using a wrapper library is like asking an assistant to draw a bar chart for you. Using the Matplotlib Artist layer is like being given the pen and ruler to draw every single rectangle and write every label yourself. It's more work, but it gives you total control over every tiny detail.
 
 It feels like I’ve been driving an automatic car (Seaborn) and just learned how a manual transmission (Matplotlib) actually works. It’s a bit intimidating, but I can see why you’d need it for custom or complex visualizations. I wonder how often experienced users have to "get their hands dirty" with individual artist objects?
+
+### Update: 2026-02-20
+- Day 51 of learning Data Science with IBM.
+
+After diving into the complex architecture of Matplotlib yesterday, today was about putting it to practice inside a Jupyter Notebook. It felt good to finally write some `plt.plot()` code and see something appear on the screen.
+
+At first, though, I got really frustrated with the workflow. I’d create a simple plot in one cell, and it would show up just fine. But then I'd realize I forgot to add a title. So, in the *next* cell, I'd write the code to add a title, run it, and... nothing would happen to my original plot. I thought I was doing something wrong or that I had to cram all my plotting code into a single, perfect cell every single time. It felt so permanent and unforgiving.
+
+It clicked for me when I learned about something called "backends." I found out that the default setting, `inline`, essentially just takes a static screenshot of your plot and embeds it in the notebook. You can't go back and edit a screenshot.
+
+The "aha!" moment came when I was introduced to the `notebook` backend. By enabling that, the plot that gets generated isn't a static image anymore; it's a live, interactive window within my notebook. Suddenly, I could create the plot in one cell, and then add a title or labels in a completely different cell later, and the original plot would update itself. It completely changed how I saw the process.
+
+This small discovery made building visualizations feel less like firing a command and more like having a conversation with my data. I wonder if experienced data scientists keep their plots "live" like this while exploring, or if they switch back to the static version for final reports?
