@@ -178,15 +178,15 @@ Suddenly, I understood. Using a wrapper library is like asking an assistant to d
 
 It feels like I’ve been driving an automatic car (Seaborn) and just learned how a manual transmission (Matplotlib) actually works. It’s a bit intimidating, but I can see why you’d need it for custom or complex visualizations. I wonder how often experienced users have to "get their hands dirty" with individual artist objects?
 
-### Update: 2026-02-20
-- Day 51 of learning Data Science with IBM.
+### Update: 2026-02-22
+- Day 53 of learning Data Science with IBM.
 
-After diving into the complex architecture of Matplotlib yesterday, today was about putting it to practice inside a Jupyter Notebook. It felt good to finally write some `plt.plot()` code and see something appear on the screen.
+After spending the last few days wrestling with the details of Matplotlib, today I finally got to apply everything to a couple of full practice projects. It felt like graduating from learning about individual tools to actually trying to build something. I worked on predicting insurance costs and then house prices.
 
-At first, though, I got really frustrated with the workflow. I’d create a simple plot in one cell, and it would show up just fine. But then I'd realize I forgot to add a title. So, in the *next* cell, I'd write the code to add a title, run it, and... nothing would happen to my original plot. I thought I was doing something wrong or that I had to cram all my plotting code into a single, perfect cell every single time. It felt so permanent and unforgiving.
+I hit a wall pretty quickly when I started trying to build a more complex model for the housing data. I knew I had to do a few things in order: first, scale the data, then create polynomial features to capture more complex relationships, and finally, train the actual regression model. I was doing each one as a separate step in my notebook. It felt so messy and manual, and I kept worrying I would accidentally mix up the order or, even worse, apply a step to my test data that I shouldn't have.
 
-It clicked for me when I learned about something called "backends." I found out that the default setting, `inline`, essentially just takes a static screenshot of your plot and embeds it in the notebook. You can't go back and edit a screenshot.
+It all clicked for me when I was introduced to the idea of a "Pipeline." At first, I thought it was just going to be another complicated function to memorize. But then I saw what it did. I could literally just create a list of the steps I wanted to perform—('scale', 'polynomial', 'model')—and the Pipeline would bundle them all together into one single object.
 
-The "aha!" moment came when I was introduced to the `notebook` backend. By enabling that, the plot that gets generated isn't a static image anymore; it's a live, interactive window within my notebook. Suddenly, I could create the plot in one cell, and then add a title or labels in a completely different cell later, and the original plot would update itself. It completely changed how I saw the process.
+The "aha" moment was realizing it was like creating a little assembly line for my data. Instead of me manually moving the data from one station to the next, I just had to define the stations once. Then, I could feed my raw data into one end, and the fully trained model would come out the other, with all the transformations happening correctly and in order inside this neat little package. It made my code so much cleaner and felt so much safer.
 
-This small discovery made building visualizations feel less like firing a command and more like having a conversation with my data. I wonder if experienced data scientists keep their plots "live" like this while exploring, or if they switch back to the static version for final reports?
+It feels like I'm starting to move from just writing lines of code to actually designing a process. I wonder if most real-world machine learning projects are built around these kinds of organized, repeatable pipelines?
