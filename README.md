@@ -190,3 +190,16 @@ It all clicked for me when I was introduced to the idea of a "Pipeline." At firs
 The "aha" moment was realizing it was like creating a little assembly line for my data. Instead of me manually moving the data from one station to the next, I just had to define the stations once. Then, I could feed my raw data into one end, and the fully trained model would come out the other, with all the transformations happening correctly and in order inside this neat little package. It made my code so much cleaner and felt so much safer.
 
 It feels like I'm starting to move from just writing lines of code to actually designing a process. I wonder if most real-world machine learning projects are built around these kinds of organized, repeatable pipelines?
+
+### Update: 2026-02-23
+- Day 54 of learning Data Science with IBM.
+
+After spending the last week learning how to build machine learning pipelines and visualize data, I was excited to finally apply those skills to a real-world dataset. Today, the topic was immigration to Canada, using data from a UN Excel file. I figured it would be a simple `read_excel` and then I could get to the fun part of making charts.
+
+I was stuck right at the beginning. I ran the command to load the Excel file into a pandas DataFrame and used the `.head()` function to check my work. All I saw was a jumble of text about the United Nations, and the column headers were nonsense like 'Unnamed: 0', 'Unnamed: 1', and so on. My heart sank a little. I thought maybe the file was corrupted or I had used the wrong function entirely. I couldn't figure out why pandas wasn't seeing the nice, clean table of countries and years that I knew was in there.
+
+It clicked for me when I stopped looking at my code and just opened the actual Excel spreadsheet itself. I saw that the first 20 rows were just a preamble—a title, notes, and information about the data source. The actual table, with the column headers I wanted, didn't even start until row 21. Pandas was doing exactly what I told it to do: start reading from the very top.
+
+The "aha!" moment was discovering the `skiprows` parameter in the `read_excel` function. It felt almost too simple to be the solution. I could literally just tell pandas to ignore the first 20 rows of the file before it started building the DataFrame. I added `skiprows=20`, reran the cell, and just like magic, a perfect, clean table appeared.
+
+It was a small victory, but it taught me a huge lesson: data rarely comes in a perfectly ready-to-use format. Sometimes the most important step is to just look at the raw file first. On to the next step
