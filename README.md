@@ -203,3 +203,16 @@ It clicked for me when I stopped looking at my code and just opened the actual E
 The "aha!" moment was discovering the `skiprows` parameter in the `read_excel` function. It felt almost too simple to be the solution. I could literally just tell pandas to ignore the first 20 rows of the file before it started building the DataFrame. I added `skiprows=20`, reran the cell, and just like magic, a perfect, clean table appeared.
 
 It was a small victory, but it taught me a huge lesson: data rarely comes in a perfectly ready-to-use format. Sometimes the most important step is to just look at the raw file first. On to the next step
+
+### Update: 2026-02-24
+- Day 55 of learning Data Science with IBM.
+
+After finally getting my Canadian immigration data loaded from that tricky Excel file yesterday, I was excited to create my first real visualization. The lesson for today was the line plot, which I figured would be pretty straightforward.
+
+I decided to plot the immigration trend from a single country to see how it worked. I chose Haiti and generated a line plot showing the number of immigrants from 1980 to 2013. When the chart appeared, I honestly thought I had made a mistake. The line was pretty steady for years, but then there was this huge, dramatic spike in 2010. It looked like an error, a glitch in the data that I needed to fix.
+
+I was stuck on this for a bit, double-checking how I had selected the data. But everything looked correct. It clicked for me when I stopped looking at my code and just asked a simple question: "What happened in Haiti in 2010?" A quick search immediately brought up the devastating earthquake that occurred that year. The spike wasn't a data error; it was a reflection of a real-world catastrophe. The plot wasn't just connecting dots; it was telling me a powerful human story about displacement and seeking refuge.
+
+That moment really shifted my perspective. I thought the point of data visualization was just to present numbers in a prettier way. I'm starting to realize it's a tool for asking questions. The chart didn't give me the answer, but it pointed me exactly where I needed to look.
+
+It feels like I'm moving from just following instructions to actually doing a bit of investigation. I wonder what other stories are waiting to be found in this dataset?
