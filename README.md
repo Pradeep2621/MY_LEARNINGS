@@ -216,3 +216,16 @@ I was stuck on this for a bit, double-checking how I had selected the data. But 
 That moment really shifted my perspective. I thought the point of data visualization was just to present numbers in a prettier way. I'm starting to realize it's a tool for asking questions. The chart didn't give me the answer, but it pointed me exactly where I needed to look.
 
 It feels like I'm moving from just following instructions to actually doing a bit of investigation. I wonder what other stories are waiting to be found in this dataset?
+
+### Update: 2026-02-25
+- Day 56 of learning Data Science with IBM.
+
+After the surprising discovery yesterday about Haiti's immigration data, I was motivated to get the rest of the dataset into good shape for more analysis. Today was all about cleaning and pre-processing with pandas.
+
+I was trying to tidy up the DataFrame by removing a few columns that I didn't need, like 'AREA' and 'REG'. I used the `drop()` function, which seemed simple enough. But every time I ran it, I'd get an error, or worse, no error at all, but when I checked the data again, the columns were still there. I was getting so frustrated, re-reading the function name and the column names over and over, thinking I had a typo somewhere.
+
+It clicked for me when I finally paid attention to a tiny argument in the documentation: `axis=1`. At first, I just ignored it, thinking it was some optional setting I didn't need. I couldn't understand why I had to specify an "axis" to remove a column.
+
+The "aha" moment came when I imagined the DataFrame as a spreadsheet grid. I realized pandas needs to know if I'm trying to delete something horizontally (a row, `axis=0`) or vertically (a column, `axis=1`). By just giving it the name 'AREA', I was telling it *what* to remove, but not *where* to look for it. Adding `axis=1` was like telling a friend, "Go to the shelf of column names, find 'AREA,' and remove that entire column from top to bottom." As soon as I added that, it worked perfectly.
+
+It's such a small detail, but it taught me that I have to be really specific with my instructions. It feels like I'm learning the grammar of data manipulation, not just the vocabulary. On to the next step
