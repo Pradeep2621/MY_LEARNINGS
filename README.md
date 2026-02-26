@@ -229,3 +229,16 @@ It clicked for me when I finally paid attention to a tiny argument in the docume
 The "aha" moment came when I imagined the DataFrame as a spreadsheet grid. I realized pandas needs to know if I'm trying to delete something horizontally (a row, `axis=0`) or vertically (a column, `axis=1`). By just giving it the name 'AREA', I was telling it *what* to remove, but not *where* to look for it. Adding `axis=1` was like telling a friend, "Go to the shelf of column names, find 'AREA,' and remove that entire column from top to bottom." As soon as I added that, it worked perfectly.
 
 It's such a small detail, but it taught me that I have to be really specific with my instructions. It feels like I'm learning the grammar of data manipulation, not just the vocabulary. On to the next step
+
+### Update: 2026-02-26
+- Day 57 of learning Data Science with IBM.
+
+After all the cleaning I did yesterday, I was excited to finally get back to visualizing the Canadian immigration data. I wanted to move beyond looking at a single country and try comparing the trends from India and China on the same line plot.
+
+I selected the data for both countries and eagerly used the `.plot()` function, expecting to see two lines moving across the years. But the chart that popped up was a complete mess. The x-axis had the country names instead of the years, and the lines were just jagged and nonsensical. I was so confused. It worked perfectly when I plotted the data for Haiti a couple of days ago, so why was this one breaking?
+
+I was stuck just staring at the broken chart, trying to figure out what I did differently. It clicked for me when I stopped looking at the chart and looked at the shape of the little data table I was trying to plot. For my India and China data, the countries were the rows and the years were the columns. The plotting function was trying to read it top-to-bottom.
+
+The "aha" moment was discovering the `.transpose()` function. It literally just flips the data table, swapping the rows and columns. As soon as I applied it, the years became the rows (perfect for the x-axis) and the countries became the columns. I ran the plot command again, and just like magic, two clear lines appeared, showing the trends over time exactly as I had imagined.
+
+It seems so obvious now, but it taught me that sometimes you have to physically reshape your data to get the story you're looking for. I'm learning that how the data is structured is just as important as what's inside it. On to the next puzzle
