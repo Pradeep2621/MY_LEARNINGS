@@ -242,3 +242,16 @@ I was stuck just staring at the broken chart, trying to figure out what I did di
 The "aha" moment was discovering the `.transpose()` function. It literally just flips the data table, swapping the rows and columns. As soon as I applied it, the years became the rows (perfect for the x-axis) and the countries became the columns. I ran the plot command again, and just like magic, two clear lines appeared, showing the trends over time exactly as I had imagined.
 
 It seems so obvious now, but it taught me that sometimes you have to physically reshape your data to get the story you're looking for. I'm learning that how the data is structured is just as important as what's inside it. On to the next puzzle
+
+### Update: 2026-02-27
+- Day 58 of learning Data Science with IBM.
+
+After finally getting the hang of transposing my data yesterday to compare two countries on a line plot, I was ready for a new type of chart. Today’s topic was the area plot, which is used to show how different parts contribute to a whole over time. I wanted to use it to visualize the immigration trends of the top 5 countries.
+
+My first step was to find those top 5 countries. I sorted my main data table by the total number of immigrants and found them: India, China, the UK, the Philippines, and Pakistan. I thought, great, I'll just grab these five rows and tell Matplotlib to plot them. I ran the code, and just like yesterday, the chart was a complete mess. It was trying to plot the years on the vertical axis and the countries on the horizontal one.
+
+I was stuck because I thought I had already solved this problem yesterday with the `.transpose()` function. But just transposing the data didn't fix it entirely. It clicked for me when I realized that preparing data for a plot isn't just one step, it's a whole sequence. I couldn't just use the rows from my main, big table. I had to build a brand new, clean mini-table specifically for this chart.
+
+My "aha" moment was seeing it as a careful process: First, sort the big table. Second, create a new, smaller table containing only the top 5 rows. Third, from that new table, select only the columns for the years (getting rid of the 'Total' column). And only then, as the final step, could I transpose it to get it ready for plotting. It felt less like just running a command and more like carefully preparing my ingredients before I start cooking.
+
+It seems like the more I get into this, the more I see that data visualization is mostly about the thoughtful preparation of the data. The actual `.plot()` command at the end feels like the easy part. I wonder if this much prep work is normal for all data science tasks.
