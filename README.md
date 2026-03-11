@@ -255,3 +255,14 @@ I was stuck because I thought I had already solved this problem yesterday with t
 My "aha" moment was seeing it as a careful process: First, sort the big table. Second, create a new, smaller table containing only the top 5 rows. Third, from that new table, select only the columns for the years (getting rid of the 'Total' column). And only then, as the final step, could I transpose it to get it ready for plotting. It felt less like just running a command and more like carefully preparing my ingredients before I start cooking.
 
 It seems like the more I get into this, the more I see that data visualization is mostly about the thoughtful preparation of the data. The actual `.plot()` command at the end feels like the easy part. I wonder if this much prep work is normal for all data science tasks.
+
+### Update: 2026-03-11
+- Day 61 of learning Data Science with IBM.
+
+After learning about bar charts and using `groupby()` yesterday to compare regional immigration, today I jumped into a different type of visualization: histograms. I learned that a histogram is all about showing the frequency distribution of a numeric dataset, using those "bins" to count how many data points fall into specific ranges.
+
+At first, I didn't quite grasp the full importance of those bins. I understood that they were like categories for numbers, but when I tried generating my first histogram using the `plot(kind='hist')` function on some immigration data, something felt off. The chart showed the distribution, which was cool, but the bars (the bins) didn't line up neatly with the tick marks on the horizontal axis. It just made the whole thing look a bit messy and hard to read exactly where each bin started and ended. I thought, "Surely there's a cleaner way to show this!"
+
+It clicked for me when I learned about using the `numpy` library's `histogram()` function first. Instead of just letting Matplotlib try to figure out the bins on its own when I called `kind='hist'`, I could use `numpy` to explicitly calculate the `counts` (frequencies) and, most importantly, the `bin_edges`. Once I had those `bin_edges` from NumPy, I could then pass them as a parameter to my plotting function. Suddenly, the histogram looked so much more precise! The bars aligned perfectly with the tick marks, making it super clear to see the distribution. It felt like I was taking more control over the visualization process, making sure the chart was not just present, but also truly effective and easy to interpret.
+
+It's amazing how much difference a small detail like bin alignment can make to a chart's readability. I'm excited to keep exploring these visualization tools and learning how to make them as clear as possible.
