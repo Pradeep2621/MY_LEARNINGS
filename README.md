@@ -310,3 +310,14 @@ At first, I just thought of a scatter plot as a way to just throw a bunch of poi
 It clicked for me when the lesson explained the *why* behind this requirement. It's not just extra code; it's fundamental to what a scatter plot is meant to do. Its whole purpose is to display values of *two variables against each other* to see if there's any correlation or pattern between them. For example, plotting "year" against "total immigration" lets me visually check if immigration has generally increased or decreased over time. If I don't explicitly define `x` and `y`, the plot can't effectively show that two-way relationship. It's about intentionally setting up the stage to observe how one variable might influence or relate to another, which is a big step beyond just showing individual values or distributions.
 
 It's amazing how each new plot type reveals a different kind of story hidden in the data. I'm excited to keep exploring how to uncover these relationships!
+
+### Update: 2026-03-16
+- Day 66 of learning Data Science with IBM.
+
+After spending the last few days getting a handle on different individual chart types like scatter plots, bar charts, and box plots, today I dove into a more fundamental way of creating visualizations directly with Matplotlib. I've been mostly using the `df.plot(kind='...')` approach, which is handy, but today's lesson focused on using `matplotlib.pyplot` functions directly.
+
+At first, I was a bit confused by the need to explicitly define a `figure` and then `axes` objects. It felt like an extra step compared to just telling a DataFrame to plot something. But the real puzzle came when the lesson showed how to put *multiple* plots on the same figure using functions like `plt.subplots()` or `fig.add_subplot()`. I was used to one plot per command, and suddenly I was seeing things like `axs[0].plot()` and `axs[1].scatter()`. It felt like a much more involved setup than what I was used to.
+
+It clicked for me when I realized this direct approach gives me a whole new level of control over the layout and arrangement of my visualizations. Instead of just creating separate plots, I can now arrange different views of my data side-by-side or in a grid within a single figure. This is so powerful for comparison! For example, being able to put a line plot and a scatter plot of the *same data* right next to each other in one go, on the same canvas, means I don't have to jump between different outputs or scroll. It's like having a master drawing board where I can sketch out multiple related ideas, and even tell them to share an axis if it makes sense for the data, which is a clever way to keep things consistent.
+
+It feels like I'm getting a deeper understanding of how to truly "build" my visualizations from the ground up now. I'm looking forward to practicing these multi-plot layouts to tell more complex data stories!
