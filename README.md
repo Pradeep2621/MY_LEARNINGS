@@ -321,3 +321,14 @@ At first, I was a bit confused by the need to explicitly define a `figure` and t
 It clicked for me when I realized this direct approach gives me a whole new level of control over the layout and arrangement of my visualizations. Instead of just creating separate plots, I can now arrange different views of my data side-by-side or in a grid within a single figure. This is so powerful for comparison! For example, being able to put a line plot and a scatter plot of the *same data* right next to each other in one go, on the same canvas, means I don't have to jump between different outputs or scroll. It's like having a master drawing board where I can sketch out multiple related ideas, and even tell them to share an axis if it makes sense for the data, which is a clever way to keep things consistent.
 
 It feels like I'm getting a deeper understanding of how to truly "build" my visualizations from the ground up now. I'm looking forward to practicing these multi-plot layouts to tell more complex data stories!
+
+### Update: 2026-03-17
+- Day 67 of learning Data Science with IBM.
+
+After spending the last few days getting more control over my visualizations with Matplotlib's direct functions, today I moved on to exploring two new types of charts: Waffle Charts and Word Clouds. I was curious to see what these specialized visuals could offer beyond the more common graphs I've been learning.
+
+At first, when I heard about Waffle Charts being good for showing proportions, my immediate thought was, "Don't I already have pie charts for that?" I was a bit stuck on why I would choose a grid of squares over the familiar slices of a pie to represent parts of a whole. It seemed like just another way to show the same kind of data.
+
+It clicked for me when the lesson emphasized the "grid of equal-sized squares" aspect, where each square actually represents a specific unit or percentage. This makes it really easy to visually count and compare the different categories, especially for someone who isn't deep into data. For example, if each square represents 1% of a total, you can quickly see that one category takes up 30 squares while another takes up 10, giving you a very concrete sense of the difference. It felt like a more tangible and perhaps less abstract way to convey proportions compared to angles in a pie chart, making it super clear even for non-technical folks. The lesson also mentioned useful applications like tracking project progress or market share, which made a lot of sense for this kind of precise, unit-based visual.
+
+It's fascinating how many different ways there are to tell a story with data, and how each chart has its own strengths. I'm excited to keep seeing what other specialized tools are out there!
