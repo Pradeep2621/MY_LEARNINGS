@@ -332,3 +332,14 @@ At first, when I heard about Waffle Charts being good for showing proportions, m
 It clicked for me when the lesson emphasized the "grid of equal-sized squares" aspect, where each square actually represents a specific unit or percentage. This makes it really easy to visually count and compare the different categories, especially for someone who isn't deep into data. For example, if each square represents 1% of a total, you can quickly see that one category takes up 30 squares while another takes up 10, giving you a very concrete sense of the difference. It felt like a more tangible and perhaps less abstract way to convey proportions compared to angles in a pie chart, making it super clear even for non-technical folks. The lesson also mentioned useful applications like tracking project progress or market share, which made a lot of sense for this kind of precise, unit-based visual.
 
 It's fascinating how many different ways there are to tell a story with data, and how each chart has its own strengths. I'm excited to keep seeing what other specialized tools are out there!
+
+### Update: 2026-03-18
+- Day 68 of learning Data Science with IBM.
+
+After briefly touching on Word Clouds yesterday alongside Waffle Charts, today I dived deeper into understanding what they are and how they work. I was curious to see how this visual tool handles textual data, which is a whole different beast from the numerical data I've been charting.
+
+At first, I was a bit stuck on why I would use a word cloud instead of just looking at a list of the most frequent words in a document. It seemed like it was just a fancy way to show information that a simple frequency table could provide. I mean, if I want to know which words appear most often, I could just sort a list, right? I wondered if it was more about aesthetics than actual insight.
+
+It clicked for me when the lesson explained that a word's size and boldness directly reflect how many times it appears. I realized it's not just about *knowing* which words are common, but about *visually perceiving* their prominence instantly. When I saw the example of a recruitment text, and words like "recruitment," "talent," and "candidates" immediately popped out as large and bold, I understood the power. It gives an immediate, high-level overview of the document's main themes without having to read a single sentence or scan through a list of numbers. It's like a visual summary that communicates the core message in a glance, which seems incredibly useful for quickly analyzing things like social media chatter or customer feedback.
+
+It's pretty neat how different visualizations are designed to tackle different kinds of data and tell their stories in unique ways. I'm excited to think about how I might apply word clouds to text data in the future!
