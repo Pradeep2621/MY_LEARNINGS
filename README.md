@@ -354,3 +354,14 @@ At first, even after understanding *how* Waffle Charts worked conceptually – w
 It clicked for me when the lesson went through a detailed list of use cases. Seeing concrete examples like "market share analysis," "project progress tracking," "budget allocation," and "election results" made all the difference. Suddenly, I wasn't just thinking about "proportions" in general; I was visualizing how a company could clearly see their slice of the market compared to competitors, or how a project manager could quickly convey how much of a task is complete by looking at filled squares. The idea of using them to summarize survey responses, displaying the distribution of answers, felt incredibly practical. This list really solidified in my mind that Waffle Charts aren't just a quirky way to show data; they're a powerful, clear, and audience-friendly way to communicate very specific kinds of proportional insights in practical, everyday situations.
 
 It's amazing how much clearer a concept becomes once you see it applied to actual problems. I'm feeling more confident about picking the right chart for the right job now!
+
+### Update: 2026-03-20
+- Day 70 of learning Data Science with IBM.
+
+After exploring various ways to visualize proportions and text data with charts like Waffle Charts and Word Clouds over the last few days, today I took a big leap into a completely different kind of visualization: geospatial data, using a library called Folium.
+
+At first, when I heard we'd be creating maps, I pictured something pretty static, like a basic image of a country or a region. I remember thinking, "Okay, that's neat for showing a location, but how much can you really do with a static map in terms of analysis?" I was a bit stuck on imagining the practical interactive uses beyond just seeing a general area.
+
+It clicked for me when the lesson emphasized that the maps created with Folium are "interactive" and, crucially, that "you can zoom in and out *after the map is rendered*." This made a huge difference to my understanding! It's not just about creating a fixed picture; it's about generating a dynamic tool that I can actually explore. The fact that the `zoom_start` parameter only sets the *initial* view, and I can then freely pan and zoom, totally changed my perspective. It means I'm not just a passive viewer; I can actively investigate different areas, drill down into details, and get a much richer understanding from the map itself. It made me see how powerful it is to have that kind of exploration built right into the visualization.
+
+It's really cool to see how Python libraries allow us to bring data to life in so many different ways. I'm excited to see what else I can do with interactive maps!
