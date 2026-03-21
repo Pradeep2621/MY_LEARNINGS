@@ -365,3 +365,14 @@ At first, when I heard we'd be creating maps, I pictured something pretty static
 It clicked for me when the lesson emphasized that the maps created with Folium are "interactive" and, crucially, that "you can zoom in and out *after the map is rendered*." This made a huge difference to my understanding! It's not just about creating a fixed picture; it's about generating a dynamic tool that I can actually explore. The fact that the `zoom_start` parameter only sets the *initial* view, and I can then freely pan and zoom, totally changed my perspective. It means I'm not just a passive viewer; I can actively investigate different areas, drill down into details, and get a much richer understanding from the map itself. It made me see how powerful it is to have that kind of exploration built right into the visualization.
 
 It's really cool to see how Python libraries allow us to bring data to life in so many different ways. I'm excited to see what else I can do with interactive maps!
+
+### Update: 2026-03-21
+- Day 71 of learning Data Science with IBM.
+
+After starting my journey with Folium and interactive maps yesterday, today I kept exploring this awesome library, specifically looking into the different kinds of maps I can create.
+
+At first, when the lesson introduced the `tiles` parameter for changing map styles, I thought it was just about making the map look different aesthetically. Like, "Oh, so I can have a street view or... another street view, but maybe with slightly different colors?" I was a bit stuck on understanding *why* these different styles existed beyond just visual preference. I didn't immediately grasp if there was a deeper analytical reason to pick "Stamen Toner" over the default "Open Street Map." It felt like a cosmetic choice.
+
+It clicked for me when the lesson detailed the specific strengths of each style. When it explained that "Stamen Toner" is great for "visualizing and exploring river meanders and coastal zones," and "Stamen Terrain" is excellent for "visualizing hill shading and natural vegetation colors," a lightbulb went off. I realized these aren't just arbitrary design choices; they are specialized tools! It's like having different lenses for looking at the same data, each designed to highlight a particular aspect of the geography. Now, instead of just making a pretty map, I can choose a style that actively helps me interpret the terrain or specific geographical features, which is much more powerful for data exploration.
+
+It's really interesting how even the visual style of a map can be a data analysis tool itself. I'm excited to try applying these different styles to some real-world location data soon!
