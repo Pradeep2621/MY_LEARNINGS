@@ -376,3 +376,14 @@ At first, when the lesson introduced the `tiles` parameter for changing map styl
 It clicked for me when the lesson detailed the specific strengths of each style. When it explained that "Stamen Toner" is great for "visualizing and exploring river meanders and coastal zones," and "Stamen Terrain" is excellent for "visualizing hill shading and natural vegetation colors," a lightbulb went off. I realized these aren't just arbitrary design choices; they are specialized tools! It's like having different lenses for looking at the same data, each designed to highlight a particular aspect of the geography. Now, instead of just making a pretty map, I can choose a style that actively helps me interpret the terrain or specific geographical features, which is much more powerful for data exploration.
 
 It's really interesting how even the visual style of a map can be a data analysis tool itself. I'm excited to try applying these different styles to some real-world location data soon!
+
+### Update: 2026-03-22
+- Day 72 of learning Data Science with IBM.
+
+After diving into the different interactive styles of Folium maps yesterday, today I spent more time getting comfortable with the basics of creating and centering maps.
+
+At first, I understood I could create a world map, and that I could zoom and pan around. But I was a bit stuck on how to initially direct the map to a specific area of interest. I figured there must be a way to tell it "start here," but I pictured it being a bit complex, maybe involving setting boundaries or a more involved setup than just a simple command. I thought I might have to manually scroll to the right region after the map loaded.
+
+It clicked for me when the lesson explicitly showed how to use the `location` parameter. Seeing how straightforward it was to simply pass in a set of latitude and longitude coordinates to center the map, like for Canada, made it so much clearer. It wasn't about a complicated setup; it was just a direct way to say, "Hey Folium, put this exact spot in the middle of my initial view." This really solidified how easy it is to pinpoint a specific region from the get-go, which is super useful if you have a particular geographic focus for your data.
+
+It's really cool how just a few parameters can give you such precise control over your visualizations. I'm looking forward to adding more layers of data to these maps next!
