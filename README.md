@@ -387,3 +387,14 @@ At first, I understood I could create a world map, and that I could zoom and pan
 It clicked for me when the lesson explicitly showed how to use the `location` parameter. Seeing how straightforward it was to simply pass in a set of latitude and longitude coordinates to center the map, like for Canada, made it so much clearer. It wasn't about a complicated setup; it was just a direct way to say, "Hey Folium, put this exact spot in the middle of my initial view." This really solidified how easy it is to pinpoint a specific region from the get-go, which is super useful if you have a particular geographic focus for your data.
 
 It's really cool how just a few parameters can give you such precise control over your visualizations. I'm looking forward to adding more layers of data to these maps next!
+
+### Update: 2026-03-23
+- Day 73 of learning Data Science with IBM.
+
+After diving into different interactive map styles and controls with Folium over the past few days, today I moved into a new but related area: an overview of dashboarding. I've been getting comfortable with making individual visualizations interactive, so this felt like a natural next step in presenting data effectively.
+
+At first, I didn't fully grasp why dashboards were such a big deal beyond just making a bunch of charts and tables look nice together. I mean, I've seen reports with graphs and tables before, and after spending time making *interactive* maps, I thought, "Okay, so a dashboard is just a collection of interactive elements, right?" I was a bit stuck on seeing the fundamental difference between just presenting data in a document with a few charts versus a full-blown dashboard. I wondered if it was mostly just about aesthetics or convenience.
+
+It clicked for me when the lesson did a direct comparison of reporting performance through static tables versus an interactive dashboard. Seeing how the dashboard allowed for hovering, drilling down into levels, and getting detailed information *on the fly*, all in one central place, was a huge "aha!" moment. The lesson also mentioned how static reports are "time-consuming, less visually appealing, and hard to comprehend," especially with real-time data. That's when I realized it's not just about making things pretty; it's about transforming raw data into a dynamic, explorable story that empowers stakeholders to make informed decisions quickly, adapting to changing data without needing new static reports. It's about proactive understanding, not reactive analysis.
+
+It's amazing how much impact the *presentation* of data can have on its understanding and usefulness. I'm excited to learn more about how to build these powerful tools!
