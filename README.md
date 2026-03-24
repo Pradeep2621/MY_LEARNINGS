@@ -398,3 +398,14 @@ At first, I didn't fully grasp why dashboards were such a big deal beyond just m
 It clicked for me when the lesson did a direct comparison of reporting performance through static tables versus an interactive dashboard. Seeing how the dashboard allowed for hovering, drilling down into levels, and getting detailed information *on the fly*, all in one central place, was a huge "aha!" moment. The lesson also mentioned how static reports are "time-consuming, less visually appealing, and hard to comprehend," especially with real-time data. That's when I realized it's not just about making things pretty; it's about transforming raw data into a dynamic, explorable story that empowers stakeholders to make informed decisions quickly, adapting to changing data without needing new static reports. It's about proactive understanding, not reactive analysis.
 
 It's amazing how much impact the *presentation* of data can have on its understanding and usefulness. I'm excited to learn more about how to build these powerful tools!
+
+### Update: 2026-03-24
+- Day 74 of learning Data Science with IBM.
+
+After spending some time getting a general overview of dashboarding yesterday, today I dived into a new topic: an introduction to Plotly, which is an interactive plotting library. This feels like a great next step, as creating effective visualizations is definitely a key part of making dashboards useful.
+
+At first, I didn't quite understand why Plotly needed two main sub-modules: Plotly Graph Objects and Plotly Express. It felt a bit confusing, like, "Do I need to learn both equally to make a simple chart, or is one just an older version?" I was stuck on figuring out which one to use and when, especially since they both seemed to be for creating interactive visualizations. It felt like an extra layer of complexity when I was just trying to grasp the basics of this new library.
+
+It clicked for me when the lesson explicitly showed that Plotly Express is a "high-level wrapper" that *uses* Graph Objects internally. Then, seeing the example where creating the *exact same* line chart took multiple lines of code and steps with Plotly Graph Objects, but only *one* single command with Plotly Express, was a huge "aha!" moment. I realized that Express is designed for quickly making common charts with its simple syntax, acting as a shortcut, while Graph Objects provides the really fine-grained control for more complex, custom plots. It's not about picking one over the other permanently, but understanding that Express is a great starting point for efficiency, and Graph Objects is there when I need to dig deeper into customization.
+
+It's really cool to see how libraries offer both simplicity for quick tasks and powerful control for detailed work. I'm excited to start making some interactive charts with Plotly!
