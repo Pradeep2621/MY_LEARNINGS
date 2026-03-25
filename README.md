@@ -409,3 +409,14 @@ At first, I didn't quite understand why Plotly needed two main sub-modules: Plot
 It clicked for me when the lesson explicitly showed that Plotly Express is a "high-level wrapper" that *uses* Graph Objects internally. Then, seeing the example where creating the *exact same* line chart took multiple lines of code and steps with Plotly Graph Objects, but only *one* single command with Plotly Express, was a huge "aha!" moment. I realized that Express is designed for quickly making common charts with its simple syntax, acting as a shortcut, while Graph Objects provides the really fine-grained control for more complex, custom plots. It's not about picking one over the other permanently, but understanding that Express is a great starting point for efficiency, and Graph Objects is there when I need to dig deeper into customization.
 
 It's really cool to see how libraries offer both simplicity for quick tasks and powerful control for detailed work. I'm excited to start making some interactive charts with Plotly!
+
+### Update: 2026-03-25
+- Day 75 of learning Data Science with IBM.
+
+After getting a feel for Plotly and its Express module yesterday, today I dove into an introduction to Dash, which is a Python library for creating web applications. This feels like the next logical step in bringing interactive visualizations and dashboards to life.
+
+At first, I was a little confused about the two main components of Dash: `dash_core_components` (DCC) and `dash_html_components` (HTML). The lesson mentioned that `dash_html_components` has "a component for every HTML tag," which made me think, "Okay, so I can build everything using just this, right?" I was stuck on understanding why I would need a *separate* set of "higher-level interactive components" in `dash_core_components` if HTML components already cover all the basic web elements. It seemed a bit redundant, and I wasn't sure when I'd use one over the other.
+
+It clicked for me when the lesson explained that `dash_core_components` are for things like sliders, input areas, and date pickers – essentially, ready-to-use interactive widgets. I realized `dash_html_components` are more like the fundamental building blocks of a webpage, similar to how plain HTML sets up text, divs, and headings. But `dash_core_components` are like pre-packaged, sophisticated tools that already handle all the complex JavaScript, HTML, and CSS needed for interactivity. So, `dash_html_components` gives you the basic structure, and `dash_core_components` gives you the powerful, interactive features right out of the box. It really showed how Dash abstracts away a lot of the web development complexities, letting me focus on the data application.
+
+It's pretty neat how Dash provides these distinct tools to build powerful web apps without needing to dive deep into front-end languages. I'm excited to actually try building a simple app next!
